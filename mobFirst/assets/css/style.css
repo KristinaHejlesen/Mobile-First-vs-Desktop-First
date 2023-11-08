@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700&family=Playfair+Display:wght@400;700&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+/* General styles & variables */
+
+body {
+  margin: 0;
+}
+
+:root {
+  --gardenFlowers: #18bead;
+  --livingroomFlowers: #f45266;
+  --otherFlowers: #f2d253;
+  --smallSpacer: 0.5rem;
+  --stdSpacer: 1rem;
+  --mdSpacer: 2rem;
+  --lgSpacer: 3rem;
+}
+
+/* Typography */
+
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 160%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Playfair Display", serif;
+  line-height: 130%;
+}
+
+/* Header */
+header {
+  min-height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); */
+  background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.6)), url("../img/flower4.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+h1 {
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+h1 span {
+  color: var(--livingroomFlowers);
+}
+
+/* Main */
+main {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+}
+
+/* Nav */
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--stdSpacer);
+  padding: 0;
+  margin: var(--stdSpacer);
+}
+
+nav a {
+  display: block;
+  padding: 1.5rem;
+  width: 24px;
+  height: 24px;
+  box-sizing: content-box;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  font-size: 1.8rem;
+  color: #eee;
+}
+
+nav i,
+nav i::before {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.garden {
+  background: var(--gardenFlowers);
+}
+
+.livingroom {
+  background: var(--livingroomFlowers);
+}
+
+.other {
+  background: var(--otherFlowers);
+}
+
+/* Flower section */
+section {
+  box-shadow: -5px 0 3px -3px #00000030;
+  padding: var(--mdSpacer);
+  display: grid;
+  gap: var(--stdSpacer);
+}
+
+.flower {
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.flower > img {
+  width: 100%;
+  aspect-ratio: 5 / 2;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+
+.flowerinfo {
+  display: flex;
+  gap: var(--smallSpacer);
+  align-items: center;
+  color: white;
+  padding: var(--smallSpacer);
+}
+
+article h2 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+article p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.flowerinfo.garden {
+  background-color: var(--gardenFlowers);
+}
+.flowerinfo.livingroom {
+  background-color: var(--livingroomFlowers);
+}
+.flowerinfo.other {
+  background-color: var(--otherFlowers);
+}
+
+.flowerinfo img {
+  width: 50px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+}
+
+/* Footer */
+
+footer {
+  min-height: 15vh;
+  background: var(--livingroomFlowers);
+  color: white;
+  text-align: center;
+  display: grid;
+  place-content: center;
+}
