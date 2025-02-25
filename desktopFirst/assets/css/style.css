@@ -144,3 +144,40 @@ footer {
   color: white;
   font-size: 1.6rem;
 }
+
+/*align-items gør at billedet stechter, så derfor sættes den til start???
+før haft behov for to kolonner, det er der ikke behov for mere, så vi laver grid om*/
+/*Media queries*/
+
+@media screen and (max-width: 1100px) {
+main { 
+  grid-template-columns: repeat(3, 1fr);
+}
+}
+
+@media screen and (max-width: 860px){
+  header {
+    padding: var(--stdSpacer);
+    align-items: start;
+    grid-template-columns: 1fr;
+  }
+  
+  .navbar{
+    grid-column: 1 / -1;
+  }
+}
+
+
+@media screen and (max-width: 800px){
+  main { 
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+}
+
+@media screen and (max-width: 500px){
+  main { 
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+}
